@@ -23,6 +23,8 @@ zmodule duration-info
 zmodule git-info
 # A heavily reduced, ASCII-only version of the Spaceship and Starship prompts.
 zmodule asciiship
+# Vim key bindings for ZSH
+zmodule jeffreytse/zsh-vi-mode
 
 #
 # Completion
