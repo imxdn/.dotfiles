@@ -34,5 +34,5 @@ source ${ZIM_HOME}/init.zsh
 
 source ~/.aliases
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.dotfiles/.p10k.zsh ]] || source ~/.dotfiles/.p10k.zsh
+# Load Starship
+eval "$(starship init zsh)"

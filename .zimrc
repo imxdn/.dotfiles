@@ -37,11 +37,6 @@ zmodule zsh-users/zsh-completions --fpath src
 zmodule completion
 
 #
-# Theme
-#
-zmodule romkatv/powerlevel10k
-
-#
 # Modules that must be initialized last
 #
 
