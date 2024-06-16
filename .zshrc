@@ -27,6 +27,13 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --color=spinner:#ff007c \
 "
 
+# Keybinding fix for vim-mode and fzf compatibility
+# https://github.com/jeffreytse/zsh-vi-mode?tab=readme-ov-file#execute-extra-commands
+function fzf_init() {
+  [ -f ~/.zim/modules/fzf/fzf---zsh.zsh ] && source ~/.zim/modules/fzf/fzf---zsh.zsh
+}
+zvm_after_init_commands+=(fzf_init)
+
 # ------------------
 # Zim Setup
 # ------------------
