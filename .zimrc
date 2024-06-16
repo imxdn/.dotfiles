@@ -12,17 +12,10 @@ zmodule input
 zmodule termtitle
 # Utility aliases and functions. Adds colour to ls, grep and less.
 zmodule utility
-
-#
-# Prompt
-#
-
-# Exposes to prompts how long the last command took to execute, used by asciiship.
-zmodule duration-info
-# Exposes git repository status information to prompts, used by asciiship.
-zmodule git-info
-# A heavily reduced, ASCII-only version of the Spaceship and Starship prompts.
-zmodule asciiship
+# Exa aliases
+zmodule exa
+# Fuzzy finder
+zmodule fzf
 # Vim key bindings for ZSH
 zmodule jeffreytse/zsh-vi-mode
 
@@ -31,20 +24,20 @@ zmodule jeffreytse/zsh-vi-mode
 #
 
 # Additional completion definitions for Zsh.
-zmodule zsh-users/zsh-completions --fpath src
-# Enables and configures smart and extensive tab completion.
-# completion must be sourced after all modules that add completion definitions.
-zmodule completion
+zmodule zsh-users/zsh-completions
+# Command suggestions
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+zmodule zsh-users/zsh-autosuggestions
+# History substring search
+zmodule zsh-users/zsh-history-substring-search
+
 
 #
 # Modules that must be initialized last
 #
 
-# Fish-like syntax highlighting for Zsh.
-# zsh-users/zsh-syntax-highlighting must be sourced after completion
+# Enables and configures smart and extensive tab completion
+zmodule completion
+# Fish-like syntax highlighting
 zmodule zsh-users/zsh-syntax-highlighting
-# Fish-like autosuggestions for Zsh.
-ZSH_AUTOSUGGEST_STRATEGY=(history completion)
-zmodule zsh-users/zsh-autosuggestions
-# History substring search
-zmodule zsh-users/zsh-history-substring-search
+
