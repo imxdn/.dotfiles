@@ -67,8 +67,14 @@ if command -v aws_completer &> /dev/null; then
   complete -C aws_completer aws
 fi
 
+# Zoxide
+if command -v zoxide &> /dev/null; then
+    eval "$(zoxide init zsh)"
+fi
+
 # Custom Aliases
 source ~/.aliases
 
 # Load Starship
 eval "$(starship init zsh)"
+
